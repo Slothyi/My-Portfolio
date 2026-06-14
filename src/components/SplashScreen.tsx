@@ -57,12 +57,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
     >
       <div className="relative flex items-center justify-center">
         {/* Staggered Cinematic Text Reveal */}
-        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-widest text-center whitespace-nowrap flex text-gradient-silver">
+        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-widest text-center whitespace-nowrap flex">
           {letters.map((letter, index) => (
             <motion.span
               key={index}
               variants={letterVariants}
-              className={letter === " " ? "w-4 md:w-8" : ""}
+              className={`text-gradient-silver ${letter === " " ? "w-4 md:w-8" : ""}`}
             >
               {letter}
             </motion.span>
